@@ -1,0 +1,111 @@
+{
+  "users": [
+    {
+      "name": "老大",
+      "phone": "123456781",
+      "email": "1220939105@qq.com",
+      "graduationschool": "梧州学院",
+      "profession": "通信工程",
+      "profile": "平平无奇普通人",
+      "id": 1,
+      "companyId": 1
+    },
+    {
+      "name": "老二",
+      "phone": "123456782",
+      "email": "1220939105@qq.com",
+      "graduationschool": "梧州学院",
+      "profession": "通信工程",
+      "profile": "平平无奇普通人",
+      "id": 2,
+      "companyId": 2
+    },
+    {
+      "name": "老三",
+      "phone": "123456783",
+      "email": "1220939105@qq.com",
+      "graduationschool": "梧州学院",
+      "profession": "通信工程",
+      "profile": "平平无奇普通人",
+      "id": 3,
+      "companyId": 2
+    },
+    {
+      "name": "老四",
+      "phone": "123456784",
+      "email": "1220939105@qq.com",
+      "graduationschool": "梧州学院",
+      "profession": "通信工程",
+      "profile": "平平无奇普通人",
+      "id": 4,
+      "companyId": 1
+    },
+    {
+      "name": "老五",
+      "phone": "123456785",
+      "email": "1220939105@qq.com",
+      "graduationschool": "梧州学院",
+      "profession": "通信工程",
+      "profile": "平平无奇普通人",
+      "id": 5,
+      "companyId": 1
+    },
+    {
+      "name": "老六",
+      "phone": "123456786",
+      "email": "1220939105@qq.com",
+      "graduationschool": "梧州学院",
+      "profession": "通信工程",
+      "profile": "平平无奇普通人",
+      "id": 6,
+      "companyId": 3
+    },
+    {
+      "name": "老七",
+      "phone": "123456783",
+      "email": "1220939105@qq.com",
+      "graduationschool": "梧州学院",
+      "profession": "通信工程",
+      "profile": "平平无奇普通人",
+      "companyId": 3,
+      "id": 7
+    },
+    {
+      "name": "陈随风",
+      "phone": "1998",
+      "email": "123@qq.com",
+      "education": "本科",
+      "graduationchool": "梧州学院",
+      "profession": "通信工程",
+      "profile": "往事随风",
+      "id": 8
+    },
+    {
+      "name": "小狐狸",
+      "phone": "9898",
+      "email": "cc@163.com",
+      "education": "本科",
+      "graduationchool": "泥电",
+      "profession": "计算机",
+      "profile": "春来我不先开口，哪个虫儿敢做声",
+      "id": 9
+    }
+  ],
+  "companies": [
+    {
+      "id": 1,
+      "name": "阿里",
+      "description": "阿里巴巴，淘宝支付宝"
+    },
+    {
+      "id": 2,
+      "name": "腾讯",
+      "description": "QQ，微信"
+    },
+    {
+      "id": 3,
+      "name": "今日头条",
+      "description": "抖音，字节跳动"
+    }
+  ]
+}
