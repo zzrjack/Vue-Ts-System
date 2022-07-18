@@ -3,7 +3,7 @@ export interface Customer {
   phone: string;
   email: string;
   education: string;
-  graduationshcool: string;
+  graduationschool: string;
   profession: string;
   profile: string;
   id: string;

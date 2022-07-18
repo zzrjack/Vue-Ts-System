@@ -4,16 +4,17 @@
       "name": "老大",
       "phone": "123456781",
       "email": "1220939105@qq.com",
+      "education": "本科",
       "graduationschool": "梧州学院",
       "profession": "通信工程",
-      "profile": "平平无奇普通人",
-      "id": 1,
-      "companyId": 1
+      "profile": "为所欲为  为所欲为你还好吗",
+      "id": 1
     },
     {
       "name": "老二",
       "phone": "123456782",
       "email": "1220939105@qq.com",
+      "education": "本科",
       "graduationschool": "梧州学院",
       "profession": "通信工程",
       "profile": "平平无奇普通人",
@@ -24,6 +25,7 @@
       "name": "老三",
       "phone": "123456783",
       "email": "1220939105@qq.com",
+      "education": "本科",
       "graduationschool": "梧州学院",
       "profession": "通信工程",
       "profile": "平平无奇普通人",
@@ -34,6 +36,7 @@
       "name": "老四",
       "phone": "123456784",
       "email": "1220939105@qq.com",
+      "education": "本科",
       "graduationschool": "梧州学院",
       "profession": "通信工程",
       "profile": "平平无奇普通人",
@@ -44,6 +47,7 @@
       "name": "老五",
       "phone": "123456785",
       "email": "1220939105@qq.com",
+      "education": "本科",
       "graduationschool": "梧州学院",
       "profession": "通信工程",
       "profile": "平平无奇普通人",
@@ -54,6 +58,7 @@
       "name": "老六",
       "phone": "123456786",
       "email": "1220939105@qq.com",
+      "education": "本科",
       "graduationschool": "梧州学院",
       "profession": "通信工程",
       "profile": "平平无奇普通人",
@@ -64,6 +69,7 @@
       "name": "老七",
       "phone": "123456783",
       "email": "1220939105@qq.com",
+      "education": "本科",
       "graduationschool": "梧州学院",
       "profession": "通信工程",
       "profile": "平平无奇普通人",
@@ -71,24 +77,34 @@
       "id": 7
     },
     {
-      "name": "陈随风",
-      "phone": "1998",
-      "email": "123@qq.com",
-      "education": "本科",
-      "graduationchool": "梧州学院",
-      "profession": "通信工程",
-      "profile": "往事随风",
-      "id": 8
-    },
-    {
       "name": "小狐狸",
       "phone": "9898",
       "email": "cc@163.com",
       "education": "本科",
-      "graduationchool": "泥电",
+      "graduationschool": "泥电",
       "profession": "计算机",
       "profile": "春来我不先开口，哪个虫儿敢做声",
       "id": 9
+    },
+    {
+      "name": "123",
+      "phone": "666",
+      "email": "12@qq.com",
+      "education": "1",
+      "graduationschool": "1",
+      "profession": "1",
+      "profile": "1",
+      "id": 10
+    },
+    {
+      "name": "23333",
+      "phone": "1",
+      "email": "8@qq.com",
+      "education": "99",
+      "graduationschool": "32",
+      "profession": "12",
+      "profile": "888",
+      "id": 11
     }
   ],
   "companies": [

@@ -1,6 +1,6 @@
 <template>
-  <div class="add container">
-    <form @submit.prevent="addCustomer()">
+  <div class="edit container">
+    <form @submit.prevent="updateCustomer()">
       <div class="mb-3">
         <label class="form-label">姓名</label>
         <input type="text" class="form-control" placeholder="name..." v-model="customer.name" />
@@ -45,50 +45,53 @@
         <textarea class="form-control" rows="3" v-model="customer.profile"></textarea>
       </div>
       <div class="d-grid gap-2">
-        <button class="btn btn-primary" type="submit" style="margin-top: 24px">添加</button>
+        <button class="btn btn-primary" type="submit" style="margin-top: 24px">更新</button>
       </div>
     </form>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+export default {
+  name: 'EditView',
+};
+</script>
+
+<script lang="ts" setup>
+import { ref, onMounted } from 'vue';
 import axios from 'axios';
-import { useRouter } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { Customer } from '@/utils/types';
 
-export default defineComponent({
-  name: 'AddView',
-  setup() {
-    const router = useRouter();
-    const customer = ref<Customer>({
-      name: '',
-      phone: '',
-      email: '',
-      education: '',
-      graduationschool: '',
-      profession: '',
-      profile: '',
-      id: '',
-    });
-    const addCustomer = async () => {
-      //console.log(customer.value);
-      let newCustomer = {
-        name: customer.value.name,
-        phone: customer.value.phone,
-        email: customer.value.email,
-        education: customer.value.education,
-        graduationschool: customer.value.graduationschool,
-        profession: customer.value.profession,
-        profile: customer.value.profile,
-      };
-      await axios.post('http://localhost:3000/users', newCustomer);
-      router.push({ path: '/', query: { alert: '用户信息已添加' } });
-    };
-    return {
-      customer,
-      addCustomer,
-    };
-  },
+const route = useRoute();
+const router = useRouter();
+const customer = ref<Customer>({
+  name: '',
+  phone: '',
+  email: '',
+  education: '',
+  graduationschool: '',
+  profession: '',
+  profile: '',
+  id: '',
 });
+onMounted(async () => {
+  const res = await axios.get('http://localhost:3000/users/' + route.params.id);
+  // console.log(res);
+  customer.value = res.data;
+});
+const updateCustomer = async () => {
+  //console.log(customer.value);
+  let uCustomer = {
+    name: customer.value.name,
+    phone: customer.value.phone,
+    email: customer.value.email,
+    education: customer.value.education,
+    graduationschool: customer.value.graduationschool,
+    profession: customer.value.profession,
+    profile: customer.value.profile,
+  };
+  await axios.put('http://localhost:3000/users/' + route.params.id, uCustomer);
+  router.push({ path: '/', query: { alert: '用户信息已更新' } });
+};
 </script>

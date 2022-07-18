@@ -1,6 +1,8 @@
 <template>
   <div class="home container">
     <!-- 表格 -->
+    <AlertComponet v-if="alert" :message="alert" />
+    <input type="text" class="form-control" placeholder="search..." v-model="filterInput" />
     <table class="table table-striped">
       <thead>
         <tr>
@@ -12,7 +14,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="customer in customers" :key="customer.id">
+        <tr v-for="customer in fileterBy(customers, filterInput)" :key="customer.id">
           <th scope="row">{{ customer.id }}</th>
           <td>{{ customer.name }}</td>
           <td>{{ customer.phone }}</td>
@@ -32,21 +34,35 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue';
+export default {
+  name: 'HomeView',
+};
+</script>
+
+<script lang="ts" setup>
+import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import { Customer } from '@/utils/types';
-export default defineComponent({
-  name: 'HomeView',
-  components: {},
-  setup() {
-    const customers = ref<Customer[]>([]);
-    // 发起请求
-    onMounted(async () => {
-      const res = await axios.get('http://localhost:3000/users');
-      // console.log(res);
-      customers.value = res.data;
-    });
-    return { customers };
-  },
+import AlertComponet from '../components/AlertComponet.vue';
+import { useRoute } from 'vue-router';
+const filterInput = ref<string>('');
+const alert = ref<string>('');
+const customers = ref<Customer[]>([]);
+const route = useRoute();
+console.log(route);
+if (route.query.alert) {
+  alert.value = String(route.query.alert);
+  setTimeout(() => {
+    alert.value = '';
+  }, 2000);
+}
+// 发起请求
+onMounted(async () => {
+  const res = await axios.get('http://localhost:3000/users');
+  // console.log(res);
+  customers.value = res.data;
 });
+const fileterBy = (customers: Customer[], value: string) => {
+  return customers.filter((customer: Customer) => customer.name.match(value));
+};
 </script>
